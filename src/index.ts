@@ -1,6 +1,6 @@
 import { extendEnvironment } from "hardhat/config";
 import { createProvider } from "hardhat/internal/core/providers/construction";
-import { lazyFunction } from "hardhat/plugins";
+import { HardhatPluginError, lazyFunction } from "hardhat/plugins";
 import type { EthereumProvider } from "hardhat/types/provider";
 import "./type-extensions";
 
@@ -20,7 +20,10 @@ extendEnvironment((hre) => {
     hre.switchNetwork = lazyFunction(() => async (networkName: string) => {
         // check if network config is set
         if (!hre.config.networks[networkName]) {
-            throw new Error(`Couldn't find network '${networkName}' in the Hardhat config`);
+            throw new HardhatPluginError(
+                "hardhat-switch-network",
+                `Couldn't find network '${networkName}' in the Hardhat config`,
+            );
         }
 
         const toProvider = await getProvider(networkName);
