@@ -34,19 +34,14 @@ extendEnvironment((hre) => {
         hre.network.provider = toProvider;
 
         // update underlying library's provider data
-        // @ts-ignore
-        if (hre.ethers) {
-            const hhInternals = await import(
-                // @ts-ignore
+        if ("ethers" in hre) {
+            const { HardhatEthersProvider } = await import(
                 "@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider"
             );
-            // @ts-ignore
-            hre.ethers.provider = new hhInternals.HardhatEthersProvider(toProvider, networkName);
+            (hre.ethers as any).provider = new HardhatEthersProvider(toProvider, networkName);
         }
-        // @ts-ignore
-        if (hre.web3) {
-            // @ts-ignore
-            hre.web3 = new (await import("web3")).Web3(toProvider);
-        }
+        // if ("web3" in hre) {
+        //     hre.web3 = new (await import("web3")).Web3(toProvider);
+        // }
     });
 });
