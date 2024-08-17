@@ -12,9 +12,8 @@ const deployerPrivateKey = vars.get(
 
 const config: HardhatUserConfig = {
     solidity: "0.8.19",
-    defaultNetwork: "mainnet",
+    defaultNetwork: "hardhat",
     networks: {
-        hardhat: {},
         mainnet: {
             url: `https://eth-mainnet.g.alchemy.com/v2/${providerApiKey}`,
             accounts: [deployerPrivateKey],
