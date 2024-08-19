@@ -61,3 +61,11 @@ typings/
 
 # environment variables
 .env
+
+# typechain
+typechain
+typechain-types
+
+# hardhat files
+cache
+artifacts

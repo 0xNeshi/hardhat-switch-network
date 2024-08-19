@@ -6,6 +6,7 @@
         "sourceMap": true,
         "strict": true,
         "esModuleInterop": true,
-        "noImplicitOverride": true
+        "noImplicitOverride": true,
+        "resolveJsonModule": true
     }
 }

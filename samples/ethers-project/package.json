@@ -2,10 +2,14 @@
     "name": "ethers-project",
     "version": "1.0.0",
     "scripts": {
-        "test": "mocha --exit --recursive 'test/**/*.test.ts'"
+        "test": "mocha --exit --recursive 'test/**/*.test.ts'",
+        "task": "hardhat multichain-txs"
     },
     "devDependencies": {
+        "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
         "@nomicfoundation/hardhat-ethers": "^3.0.6",
+        "@typechain/ethers-v6": "^0.5.1",
+        "@typechain/hardhat": "^9.1.0",
         "@types/chai": "^4.1.7",
         "@types/fs-extra": "^11.0.4",
         "@types/mocha": "^10.0.0",
@@ -14,11 +18,12 @@
         "eslint": "^8.5.0",
         "ethers": "^6.13.2",
         "hardhat": "^2.22.0",
+        "hardhat-switch-network": "0.1.0",
         "mocha": "^10.7.2",
         "prettier": "3.3.0",
         "prettier-eslint-cli": "^7.0.0",
         "ts-node": "^8.1.0",
-        "typescript": "^5.0.0",
-        "hardhat-switch-network": "file:../../dist/"
+        "typechain": "^8.3.2",
+        "typescript": "^5.0.0"
     }
 }
