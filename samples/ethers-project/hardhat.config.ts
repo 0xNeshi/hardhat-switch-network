@@ -2,7 +2,7 @@
 import { HardhatUserConfig } from "hardhat/types";
 import { vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-ethers";
-import "../../../src/index";
+import "hardhat-switch-network";
 
 const providerApiKey = vars.get("ALCHEMY_API_KEY");
 const deployerPrivateKey = vars.get(
