@@ -26,8 +26,8 @@
         "change-network"
     ],
     "scripts": {
-        "test": "npm run test --workspaces",
-        "test-integrations": "npm run task --workspaces",
+        "test": "mocha --exit --recursive 'test/**/*.test.ts' && npm run test --workspaces",
+        "test-integrations": "npx hardhat compile && npm run deploy-contracts && npm run task --workspaces",
         "deploy-contracts": "./deploy-contracts.sh",
         "build": "tsc",
         "watch": "tsc -w",

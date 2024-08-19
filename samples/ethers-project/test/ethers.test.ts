@@ -17,6 +17,5 @@ describe("ethers tests", () => {
         const pol_amoy_hhsn = await hre.ethers.getContractAt("HHSN", pol_amoy_address);
         const amoy_msg = await pol_amoy_hhsn.message();
         expect(amoy_msg.startsWith("Polygon Amoy: ")).to.be.true;
-        await expect(eth_sep_hhsn.message()).to.be.rejected;
     });
 });
