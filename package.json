@@ -4,8 +4,8 @@
     "description": "Hardhat plugin to enable switching networks during runtime",
     "author": "Nenad Misić",
     "license": "MIT",
-    "main": "dist/src/index.js",
-    "types": "dist/src/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/0xNeshi/hardhat-switch-network.git"
@@ -18,7 +18,9 @@
         "ethereum",
         "smart-contracts",
         "hardhat",
-        "hardhat-plugin"
+        "hardhat-plugin",
+        "switch-network",
+        "change-network"
     ],
     "scripts": {
         "test": "mocha --exit --recursive 'test/**/*.test.ts'",
@@ -29,7 +31,12 @@
         "format": "prettier-eslint --list-different --write $(git ls-files '*.ts' '*.js')"
     },
     "files": [
-        "dist/src/",
+        "dist",
+        "src",
+        "*.d.ts",
+        "*.d.ts.map",
+        "*.js",
+        "*.js.map",
         "LICENSE",
         "README.md"
     ],
@@ -50,8 +57,6 @@
         "typescript": "^5.0.0"
     },
     "peerDependencies": {
-        "@nomicfoundation/hardhat-ethers": "^3.0.6",
-        "ethers": "^6.13.2",
         "hardhat": "^2.22.0"
     }
 }
