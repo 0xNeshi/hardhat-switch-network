@@ -18,10 +18,9 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-networks=(sepolia polygonAmoy)
-dir_array=(./typechain-types ./artifacts ./cache)
-
 export HARDHAT_IGNITION_CONFIRM_DEPLOYMENT=false
+
+networks=(sepolia polygonAmoy)
 
 for network in "${networks[@]}"; do
     echo "Deploying to $network..."
@@ -35,8 +34,10 @@ for chain_path in ./ignition/deployments/*; do
     npx hardhat ignition verify "$chain" --include-unrelated-contracts
 done
 
+dir_array=("./typechain-types" "./artifacts" "./cache")
+
 for proj in ./samples/*; do
-    for dir in "$dir_array"; do
+    for dir in "${dir_array[@]}"; do
         cp -r "$dir" "$proj"
         rm -rf "$dir"
     done
