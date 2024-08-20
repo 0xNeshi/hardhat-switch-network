@@ -1,2 +1,2 @@
-import "./deploy";
+import "./multichain-deploys";
 import "./transactions";
