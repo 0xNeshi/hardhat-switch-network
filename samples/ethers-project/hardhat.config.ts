@@ -4,7 +4,7 @@ import "@typechain/hardhat";
 import "hardhat-switch-network";
 import { vars } from "hardhat/config";
 import { HardhatUserConfig } from "hardhat/types";
-import "./tasks/test-multichain-txs";
+import "./tasks";
 
 const providerApiKey = vars.get("ALCHEMY_API_KEY");
 const deployerPrivateKey = vars.get("DEPLOYER_PRIVATE_KEY");

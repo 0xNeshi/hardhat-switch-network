@@ -8,7 +8,10 @@ for network in "${networks[@]}"; do
 done
 
 for proj in ./samples/*; do
-    mv -f ./typechain-types "$proj"
-    mv -f ./artifacts "$proj"
-    mv -f ./cache "$proj"
+    cp -r ./typechain-types "$proj"
+    rm -rf ./typechain-types
+    cp -r ./artifacts "$proj"
+    rm -rf ./artifacts
+    cp -r ./cache "$proj"
+    rm -rf ./cache
 done
