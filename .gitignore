@@ -69,3 +69,4 @@ typechain-types
 # hardhat files
 cache
 artifacts
+!ignition/deployments/**/artifacts
