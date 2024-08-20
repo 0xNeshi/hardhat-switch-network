@@ -27,7 +27,8 @@
     ],
     "scripts": {
         "test": "mocha --exit --recursive 'test/**/*.test.ts' && npm run test --workspaces",
-        "test-integrations": "hardhat compile && ./deploy-contracts.sh && npm test && npm run test-live-transactions --workspaces",
+        "test-live": "hardhat compile && ./deploy-contracts.sh && npm test",
+        "test-live-txs": "npm run test-live-txs --workspaces",
         "build": "tsc",
         "watch": "tsc -w",
         "prepublishOnly": "npm run build",

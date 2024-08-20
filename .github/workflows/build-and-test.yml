@@ -30,4 +30,4 @@ jobs:
             - run:
                   HARDHAT_VAR_ALCHEMY_API_KEY=${{ secrets.ALCHEMY_API_KEY }} HARDHAT_VAR_DEPLOYER_PRIVATE_KEY=${{ secrets.DEPLOYER_PRIVATE_KEY }}
                   HARDHAT_VAR_ETHERSCAN_API_KEY=${{ secrets.ETHERSCAN_API_KEY }} HARDHAT_VAR_POLYGONSCAN_API_KEY=${{ secrets.POLYGONSCAN_API_KEY }}
-                  npm run test-integrations
+                  npm run test-live

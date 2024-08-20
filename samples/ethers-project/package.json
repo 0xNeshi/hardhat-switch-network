@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "test": "mocha --exit --recursive 'test/**/*.test.ts'",
-        "test-live-transactions": "hardhat transactions"
+        "test-live-txs": "hardhat transactions"
     },
     "devDependencies": {
         "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
