@@ -4,7 +4,7 @@ networks=(sepolia polygonAmoy)
 export HARDHAT_IGNITION_CONFIRM_DEPLOYMENT=false
 for network in "${networks[@]}"; do
     echo "Deploying to $network..."
-    npx hardhat ignition deploy ignition/modules/HHSN.ts --network "$network" --verify
+    npx hardhat ignition deploy ignition/modules/HHSN.ts --network "$network" --parameters "ignition/parameters/$network.json" --verify
 done
 
 for proj in ./samples/*; do
