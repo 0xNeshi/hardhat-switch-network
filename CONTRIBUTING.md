@@ -70,4 +70,14 @@ We use [Prettier](https://prettier.io/) to format all the code without any speci
 
 We also have [eslint](https://eslint.org/) installed in all the projects. It checks that you have run Prettier and forbids some dangerous patterns.
 
-The linter is always run in the CI, so make sure it passes before pushing code. You can use `npm run lint` and `npm run lint:fix` inside the packages' folders.
+The linter is always run in the CI, so make sure it passes before pushing code. You can use `npm run lint` to check for errors.
+
+You can also run `npm run format` to format all of the files.
+
+### Website and documentation branching
+
+If you are modifying the default config, adding a feature, or doing any kind of technical work that should be reflected in the documentation, the documentation change should be contained in the same branch and PR as the change.
+
+If you are working purely on the website or documentation, not as a result of a technical change, you should branch from [`master`](https://github.com/0xNeshi/hardhat-switch-network/tree/master) and use it as the base branch in your pull request.
+
+Note that the `master` branch is automatically deployed, so take care when merging into it.
