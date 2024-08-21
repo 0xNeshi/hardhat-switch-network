@@ -1,6 +1,6 @@
 {
     "name": "hardhat-switch-network",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Hardhat plugin to enable switching networks during runtime",
     "author": "Nenad Misić",
     "license": "MIT",
