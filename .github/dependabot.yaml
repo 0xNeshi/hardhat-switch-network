@@ -1,8 +1,10 @@
 version: 2
 updates:
-    # Enable version updates for plugin itself
+    # Enable version updates
     - package-ecosystem: "npm"
-      directory: "/" # Location of package manifests
+      directories:
+          - "/" # Location of package manifests for plugin itself
+          - "/samples/*" # Location of package manifests for sample projects
       schedule:
           interval: "weekly"
           day: "monday"
@@ -10,13 +12,13 @@ updates:
           timezone: "Asia/Tokyo"
       open-pull-requests-limit: 50
       versioning-strategy: increase
-    # Enable version updates for sample
-    - package-ecosystem: "npm"
-      directory: "/sample" # Location of package manifests
+    # Keep dependencies for GitHub Actions up-to-date
+    - package-ecosystem: "github-actions"
+      directory: "/"
       schedule:
           interval: "weekly"
           day: "monday"
           time: "07:00"
           timezone: "Asia/Tokyo"
-      open-pull-requests-limit: 50
-      versioning-strategy: increase
+      labels:
+          - "x:size/small"
