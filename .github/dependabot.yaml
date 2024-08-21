@@ -4,7 +4,7 @@ updates:
     - package-ecosystem: "npm"
       directories:
           - "/" # Location of package manifests for plugin itself
-          - "/samples/*" # Location of package manifests for sample projects
+          - "/samples/ethers-project" # Location of package manifests for sample projects
       schedule:
           interval: "weekly"
           day: "monday"
