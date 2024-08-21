@@ -8,26 +8,20 @@ on:
         types: [created]
 
 jobs:
-    build:
+    publish:
         runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 20
-            - run: npm ci
-            - run: npm test
-
-    publish-npm:
-        needs: build
-        runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
                   registry-url: https://registry.npmjs.org/
-            - run: npm ci
-            - run: npm publish
+            - name: Install Deps
+              run: npm ci
+            - name: Build
+              run: npm run build
+            - name: Publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+              run: npm publish --access public
