@@ -59,64 +59,36 @@ async function main(hre: HardhatRuntimeEnvironment) {
 
 ## Configuration
 
-This plugin does not add any new configuration options to your hardhat.config.js or hardhat.config.ts files.
+This plugin does not add any new configuration options to your `hardhat.config.js` or `hardhat.config.ts` files.
 
 ## Usage
 
-To use the `switchNetwork` function in your Hardhat scripts, tasks, or tests:
+There are no additional steps you need to take for this plugin to work.
 
-1. **Set Up Environment Variables:** Ensure your Hardhat environment is configured with the appropriate API keys and network URLs. You can set these using:
-
-    ```bash
-    npx hardhat vars set ALCHEMY_API_KEY <your-alchemy-api-key>
-    npx hardhat vars set DEPLOYER_PRIVATE_KEY <your-deployer-account-private-key>
-    ```
-
-    If you wish to test out how the extenions behaves when sending transaction on live testnets,
-    you will need to redeploy the test contract (see _contracts/HHSN.sol_), and to do that, you will need to provide your own Etherscan and Polygonscan API keys:
-
-    ```bash
-    npx hardhat vars set ETHERSCAN_API_KEY <your-etherscan-api-key>
-    npx hardhat vars set POLYGONSCAN_API_KEY <your-polygonscan-api-key>
-    ```
-
-2. **Use the `switchNetwork` Function:** You can now use the `switchNetwork` function to dynamically switch networks. For example, in a Hardhat script:
-
-    ```ts
-    import { HardhatRuntimeEnvironment } from "hardhat/types";
-
-    async function main(hre: HardhatRuntimeEnvironment) {
-        // Switch to Sepolia network
-        await hre.switchNetwork("sepolia");
-
-        // Perform transactions or deploy contracts on the Sepolia network
-        // Example:
-        // const result = await hre.ethers.getContractFactory("MyContract");
-        // const contract = await result.deploy();
-        // console.log(`Contract deployed at: ${contract.address}`);
-    }
-
-    main(hre).catch((error) => {
-        console.error(error);
-        process.exitCode = 1;
-    });
-    ```
-
-3. **Run Transactions:** You can now run transactions against live networks. Just make sure to configure the appropriate environment variables and network settings in your Hardhat configuration.
+Install it and access `switchNetwork` through the Hardhat Runtime Environment anywhere you need it (tasks, scripts, tests, etc).
 
 ## Support Open Source
 
-If you find this plugin useful and want to support its development, consider making a donation. Your support helps me continue to work on open source projects and improve the tools available to the community.
+Building and maintaining `hardhat-switch-network` requires significant time and effort, and your support can help keep this project alive and thriving. If you find this plugin helpful in your projects, please consider contributing to its ongoing development.
 
-You can contribute using the following cryptocurrencies and tokens:
+### Contribute
 
--   **Bitcoin (BTC): your-bitcoin-address**
--   **Ethereum (ETH): 0xf35d9f86e5f620Dc8a6938b154E37FF23244Dff9**
--   **USDT (ERC20): 0xf35d9f86e5f620Dc8a6938b154E37FF23244Dff9**
--   **USDC (ERC20): 0xf35d9f86e5f620Dc8a6938b154E37FF23244Dff9**
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. Go to [CONTRIBUTING.md](./CONTRIBUTING.md) to learn about how to set up Hardhat's development environment.
+
+**Don't forget to give the project a star!**
+
+### Donate Cryptocurrency
+
+If you're able, financial contributions are greatly appreciated and help cover the costs of development and support. You can donate using the following Ethereum-based tokens: **ETH, USDT, USDC, wBTC, wETH**.
+
+**Ethereum Wallet Address:**
+
+```mm
+0xf35d9f86e5f620Dc8a6938b154E37FF23244Dff9
+```
 
 ![donate address](./assets/donate_to.png)
 
-Thank you for your support!
+Your support is crucial in ensuring that `hardhat-switch-network` continues to grow and serve the community. Thank you for helping keep this project going!
 
-Happy coding!
+**Happy coding!**
