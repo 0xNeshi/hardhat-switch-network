@@ -70,4 +70,4 @@ We use [Prettier](https://prettier.io/) to format all the code without any speci
 
 We also have [eslint](https://eslint.org/) installed in all the projects. It checks that you have run Prettier and forbids some dangerous patterns.
 
-The linter is always run in the CI, so make sure it passes before pushing code. You can use `pnpm lint` and `pnpm lint:fix` inside the packages' folders.
+The linter is always run in the CI, so make sure it passes before pushing code. You can use `npm run lint` and `npm run lint:fix` inside the packages' folders.
