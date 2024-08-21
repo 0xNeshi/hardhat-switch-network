@@ -1,10 +1,8 @@
 version: 2
 updates:
-    # Enable version updates
+    # Enable version updates for plugin itself
     - package-ecosystem: "npm"
-      directories:
-          - "/" # Location of package manifests for plugin itself
-          - "/samples/ethers-project" # Location of package manifests for sample projects
+      directory: "/" # Location of package manifests
       schedule:
           interval: "weekly"
           day: "monday"
