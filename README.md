@@ -75,8 +75,6 @@ Building and maintaining `hardhat-switch-network` requires significant time and 
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. Go to [CONTRIBUTING.md](./CONTRIBUTING.md) to learn about how to set up Hardhat's development environment.
 
-**Don't forget to give the project a star!**
-
 ### Donate Cryptocurrency
 
 If you're able, financial contributions are greatly appreciated and help cover the costs of development and support. You can donate using the following Ethereum-based tokens: **ETH, USDT, USDC, wBTC, wETH**.
@@ -90,5 +88,7 @@ If you're able, financial contributions are greatly appreciated and help cover t
 ![donate address](./assets/donate_to.png)
 
 Your support is crucial in ensuring that `hardhat-switch-network` continues to grow and serve the community. Thank you for helping keep this project going!
+
+**Don't forget to give the project a star!** :star:
 
 **Happy coding!**
