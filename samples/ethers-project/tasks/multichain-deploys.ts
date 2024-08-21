@@ -1,7 +1,7 @@
-import { assert } from "console";
+// import { assert } from "console";
 import { task } from "hardhat/config";
 
-task("multichain-deploys", "Tests deploying to multiple chains", async (taskArgs, hre) => {
+task("multichain-deploys", "Tests deploying to multiple chains", async () => {
     // const randomNumber = Math.floor(Math.random() * 10000);
     // // test sending transactions
     // console.log("Deploying on Ethereum Sepolia...");
