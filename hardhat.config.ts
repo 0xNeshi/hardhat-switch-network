@@ -4,8 +4,13 @@ import "@typechain/hardhat";
 import { vars } from "hardhat/config";
 import { HardhatUserConfig } from "hardhat/types";
 
+// You can get your own at https://dashboard.alchemyapi.io
 const providerApiKey = vars.get("ALCHEMY_API_KEY");
-const deployerPrivateKey = vars.get("DEPLOYER_PRIVATE_KEY");
+// If not set, it uses the hardhat account 0 private key.
+const deployerPrivateKey = vars.get(
+    "DEPLOYER_PRIVATE_KEY",
+    "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+);
 const etherscanApiKey = vars.get("ETHERSCAN_API_KEY");
 const polygoncanApiKey = vars.get("POLYGONSCAN_API_KEY");
 

@@ -27,7 +27,7 @@
     ],
     "scripts": {
         "test": "mocha --exit --recursive 'test/**/*.test.ts' && npm run test --workspaces",
-        "test-live": "hardhat compile && ./deploy-contracts.sh && npm test",
+        "compile": "hardhat compile",
         "test-live-txs": "npm run test-live-txs --workspaces",
         "redeploy": "hardhat compile && ./deploy-contracts.sh --reset",
         "build": "tsc",
@@ -47,24 +47,28 @@
         "README.md"
     ],
     "devDependencies": {
+        "@eslint/js": "^9.9.0",
         "@nomicfoundation/hardhat-ethers": "^3.0.6",
         "@nomicfoundation/hardhat-ignition-ethers": "^0.15.5",
         "@typechain/ethers-v6": "^0.5.1",
         "@typechain/hardhat": "^9.1.0",
         "@types/chai": "^4.1.7",
+        "@types/eslint__js": "^8.42.3",
         "@types/fs-extra": "^11.0.4",
         "@types/mocha": "^10.0.0",
         "@types/node": "^18.0.0",
         "chai": "^4.3.0",
-        "eslint": "^8.5.0",
+        "eslint": "^8.57.0",
         "ethers": "^6.13.2",
+        "globals": "^15.9.0",
         "hardhat": "^2.22.0",
         "mocha": "^10.7.2",
         "prettier": "3.3.0",
-        "prettier-eslint-cli": "^7.0.0",
+        "prettier-eslint-cli": "^8.0.0",
         "ts-node": "^8.1.0",
         "typechain": "^8.3.2",
-        "typescript": "^5.0.0"
+        "typescript": "^5.0.0",
+        "typescript-eslint": "^8.2.0"
     },
     "peerDependencies": {
         "hardhat": "^2.22.0"

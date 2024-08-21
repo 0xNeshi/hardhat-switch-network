@@ -1,24 +1,22 @@
-# Hardhat Switch Network TEMPORARY, SEE README-TEMPLATE.md
+# hardhat-switch-network
 
-Allows changing the current network in Hardhat.
+_A Hardhat plugin for dynamic network switching during runtime_
 
-Useful for multi-chain projects, where switching between two networks in a script may be desirable.
+[Hardhat](https://hardhat.org) plugin for enabling on-the-fly network switching within your Hardhat scripts and tasks.
 
-## <<<<<<< Support Open Source >>>>>>>
+## What
 
-**If you find this package useful, help me create other useful tools by donating ETH, USDC, MATIC, WETH or LINK on any of the EVM chains.**
-
-**Address: 0xf35d9f86e5f620Dc8a6938b154E37FF23244Dff9**
-
-![donate address](./assets/donate_to.png)
-
-**Tests are run against live testnets to make sure the package works correctly. If you can, send some Sepolia ETH and Amoy MATIC to support the package reliability.**
+This plugin allows you to switch between networks dynamically during the execution of Hardhat tasks or scripts. This is particularly useful when you need to interact with different Ethereum networks without restarting your Hardhat node or re-running your scripts.
 
 ## Installation
+
+To install the plugin, use the following command:
 
 ```bash
 npm install --save-dev hardhat-switch-network
 ```
+
+or
 
 ```bash
 yarn add -D hardhat-switch-network
@@ -36,10 +34,61 @@ Or if you are using TypeScript, in your `hardhat.config.ts`:
 import "hardhat-switch-network";
 ```
 
+## Required plugins
+
+-   [@nomicfoundation/hardhat-ethers](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-ethers)
+
+## Tasks
+
+This plugin does not add any new Hardhat tasks. It focuses on extending the functionality of existing tasks by enabling network switching.
+
+## Environment extensions
+
+This plugin extends the Hardhat Runtime Environment by adding a `switchNetwork` function. This function allows you to switch to a different network during runtime.
+
+```ts
+import { HardhatRuntimeEnvironment } from "hardhat/types";
+
+async function main(hre: HardhatRuntimeEnvironment) {
+    // Switch to a different network
+    await hre.switchNetwork("sepolia");
+
+    // Now you can interact with the new network
+}
+```
+
+## Configuration
+
+This plugin does not add any new configuration options to your `hardhat.config.js` or `hardhat.config.ts` files.
+
 ## Usage
 
-Switch the network to any network defined in hardhat.config.js with this simple call:
+There are no additional steps you need to take for this plugin to work.
 
-```typescript
-hre.switchNetwork("goerli");
+Install it and access `switchNetwork` through the Hardhat Runtime Environment anywhere you need it (tasks, scripts, tests, etc).
+
+## Support Open Source
+
+Building and maintaining `hardhat-switch-network` requires significant time and effort, and your support can help keep this project alive and thriving. If you find this plugin helpful in your projects, please consider contributing to its ongoing development.
+
+### Contribute
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. Go to [CONTRIBUTING.md](./CONTRIBUTING.md) to learn about how to set up Hardhat's development environment.
+
+**Don't forget to give the project a star!**
+
+### Donate Cryptocurrency
+
+If you're able, financial contributions are greatly appreciated and help cover the costs of development and support. You can donate using the following Ethereum-based tokens: **ETH, USDT, USDC, wBTC, wETH**.
+
+**Ethereum Wallet Address:**
+
+```mm
+0xf35d9f86e5f620Dc8a6938b154E37FF23244Dff9
 ```
+
+![donate address](./assets/donate_to.png)
+
+Your support is crucial in ensuring that `hardhat-switch-network` continues to grow and serve the community. Thank you for helping keep this project going!
+
+**Happy coding!**

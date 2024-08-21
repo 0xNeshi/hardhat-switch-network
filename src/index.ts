@@ -38,6 +38,7 @@ extendEnvironment((hre) => {
             const { HardhatEthersProvider } = await import(
                 "@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider"
             );
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (hre.ethers as any).provider = new HardhatEthersProvider(toProvider, networkName);
         }
         // if ("web3" in hre) {
