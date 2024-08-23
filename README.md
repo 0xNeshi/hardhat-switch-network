@@ -1,7 +1,5 @@
 # Hardhat Switch Network Plugin
 
-_A Hardhat plugin for dynamic network switching during runtime_
-
 [Hardhat](https://hardhat.org) plugin for enabling on-the-fly network switching within your Hardhat scripts and tasks.
 
 ## What
