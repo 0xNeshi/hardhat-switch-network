@@ -1,4 +1,4 @@
-# hardhat-switch-network
+# Hardhat Switch Network Plugin
 
 _A Hardhat plugin for dynamic network switching during runtime_
 
