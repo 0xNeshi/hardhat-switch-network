@@ -41,8 +41,8 @@ extendEnvironment((hre) => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (hre.ethers as any).provider = new HardhatEthersProvider(toProvider, networkName);
         }
-        // if ("web3" in hre) {
-        //     hre.web3 = new (await import("web3")).Web3(toProvider);
-        // }
+        if ("web3" in hre) {
+            hre.web3 = new (await import("web3")).Web3(toProvider);
+        }
     });
 });

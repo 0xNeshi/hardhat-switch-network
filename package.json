@@ -51,6 +51,7 @@
         "@eslint/js": "^9.9.0",
         "@nomicfoundation/hardhat-ethers": "^3.0.6",
         "@nomicfoundation/hardhat-ignition-ethers": "^0.15.5",
+        "@nomicfoundation/hardhat-web3-v4": "^1.0.0",
         "@types/chai": "^4.1.7",
         "@types/eslint__js": "^8.42.3",
         "@types/fs-extra": "^11.0.4",
@@ -66,7 +67,8 @@
         "prettier-eslint-cli": "^8.0.0",
         "ts-node": "^8.1.0",
         "typescript": "^5.0.0",
-        "typescript-eslint": "^8.2.0"
+        "typescript-eslint": "^8.2.0",
+        "web3": "^4.12.1"
     },
     "peerDependencies": {
         "hardhat": "^2.22.0"
