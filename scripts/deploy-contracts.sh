@@ -41,6 +41,9 @@ dir_array=("./artifacts" "./cache")
 for proj in ./samples/*; do
     for dir in "${dir_array[@]}"; do
         cp -r "$dir" "$proj"
-        rm -rf "$dir"
     done
+done
+
+for dir in "${dir_array[@]}"; do
+    rm -rf "$dir"
 done
