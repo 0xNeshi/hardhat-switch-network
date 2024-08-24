@@ -34,7 +34,9 @@ for chain_path in ./ignition/deployments/*; do
     npx hardhat ignition verify "$chain" --include-unrelated-contracts
 done
 
-dir_array=("./typechain-types" "./artifacts" "./cache")
+echo "Moving compilation artifacts into projects..."
+
+dir_array=("./artifacts" "./cache")
 
 for proj in ./samples/*; do
     for dir in "${dir_array[@]}"; do

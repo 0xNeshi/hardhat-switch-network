@@ -1,6 +1,5 @@
 import "@nomicfoundation/hardhat-chai-matchers";
 import "@nomicfoundation/hardhat-ethers";
-import "@typechain/hardhat";
 import "hardhat-switch-network";
 import { vars } from "hardhat/config";
 import { HardhatUserConfig } from "hardhat/types";
