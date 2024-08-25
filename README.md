@@ -1,5 +1,10 @@
 # Hardhat Switch Network Plugin
 
+[![npm](https://img.shields.io/npm/v/hardhat-switch-network?color=blue)](https://www.npmjs.com/package/hardhat-switch-network)
+[![GitHub Workflow Status](https://github.com/0xNeshi/hardhat-switch-network/actions/workflows/build.yml/badge.svg)](https://github.com/0xNeshi/hardhat-switch-network/actions/workflows/build.yml)
+[![Project license](https://img.shields.io/github/license/0xNeshi/hardhat-switch-network.svg)](LICENSE)
+[![hardhat](https://hardhat.org/buidler-plugin-badge.svg?1)](https://hardhat.org)
+
 [Hardhat](https://hardhat.org) plugin for enabling on-the-fly network switching within your Hardhat scripts and tasks.
 
 ## What
