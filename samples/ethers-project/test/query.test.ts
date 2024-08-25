@@ -8,14 +8,14 @@ const pol_amoy_address = polygonAmoyAddresses["HHSN#HHSN"];
 
 describe("ethers query tests", () => {
     it("should be able read contract state on multiple networks", async () => {
-        await hre.switchNetwork("sepolia");
-        const eth_sep_hhsn = await hre.ethers.getContractAt("HHSN", eth_sep_address);
-        const sep_msg = await eth_sep_hhsn.message();
-        expect(sep_msg.startsWith("Sepolia: ")).to.be.true; // eslint-disable-line @typescript-eslint/no-unused-expressions
-
         await hre.switchNetwork("polygonAmoy");
         const pol_amoy_hhsn = await hre.ethers.getContractAt("HHSN", pol_amoy_address);
         const amoy_msg = await pol_amoy_hhsn.message();
         expect(amoy_msg.startsWith("Polygon Amoy: ")).to.be.true; // eslint-disable-line @typescript-eslint/no-unused-expressions
+
+        await hre.switchNetwork("sepolia");
+        const eth_sep_hhsn = await hre.ethers.getContractAt("HHSN", eth_sep_address);
+        const sep_msg = await eth_sep_hhsn.message();
+        expect(sep_msg.startsWith("Sepolia: ")).to.be.true; // eslint-disable-line @typescript-eslint/no-unused-expressions
     });
 });
