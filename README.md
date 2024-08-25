@@ -34,7 +34,12 @@ import "hardhat-switch-network";
 
 ## Required plugins
 
+There are no required plugins. This plugin automatically detects which underlying Hardhat plugin for interacting with the Ethereum blockchain is being used and hooks into it. You just install this plugin and use it!
+
+Currently supported Hardhat plugins for interacting with the Ethereum blockchain:
+
 -   [@nomicfoundation/hardhat-ethers](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-ethers)
+-   [@nomicfoundation/hardhat-web3-v4](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-web3-v4)
 
 ## Tasks
 
