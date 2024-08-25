@@ -1,6 +1,9 @@
-# hardhat-switch-network
+# Hardhat Switch Network Plugin
 
-_A Hardhat plugin for dynamic network switching during runtime_
+[![npm](https://img.shields.io/npm/v/hardhat-switch-network?color=blue)](https://www.npmjs.com/package/hardhat-switch-network)
+[![GitHub Workflow Status](https://github.com/0xNeshi/hardhat-switch-network/actions/workflows/build.yml/badge.svg)](https://github.com/0xNeshi/hardhat-switch-network/actions/workflows/build.yml)
+[![Project license](https://img.shields.io/github/license/0xNeshi/hardhat-switch-network.svg)](LICENSE)
+[![hardhat](https://hardhat.org/buidler-plugin-badge.svg?1)](https://hardhat.org)
 
 [Hardhat](https://hardhat.org) plugin for enabling on-the-fly network switching within your Hardhat scripts and tasks.
 
@@ -36,7 +39,12 @@ import "hardhat-switch-network";
 
 ## Required plugins
 
+There are no required plugins. This plugin automatically detects which underlying Hardhat plugin for interacting with the Ethereum blockchain is being used and hooks into it. You just install this plugin and use it!
+
+Currently supported Hardhat plugins for interacting with the Ethereum blockchain:
+
 -   [@nomicfoundation/hardhat-ethers](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-ethers)
+-   [@nomicfoundation/hardhat-web3-v4](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-web3-v4)
 
 ## Tasks
 

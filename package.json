@@ -6,9 +6,6 @@
     "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "workspaces": [
-        "samples/ethers-project"
-    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/0xNeshi/hardhat-switch-network.git"
@@ -16,7 +13,7 @@
     "bugs": {
         "url": "https://github.com/0xNeshi/hardhat-switch-network/issues"
     },
-    "homepage": "https://github.com/0xNeshi/hardhat-switch-network#readme",
+    "homepage": "https://0xneshi.github.io/hardhat-switch-network/",
     "keywords": [
         "ethereum",
         "smart-contracts",
@@ -26,10 +23,14 @@
         "change-network"
     ],
     "scripts": {
-        "test": "mocha --exit --recursive 'test/**/*.test.ts' && npm run test --workspaces",
+        "ci-all": "./scripts/install-all.sh --clean",
+        "install-all": "./scripts/install-all.sh",
+        "test": "mocha --exit --recursive 'test/**/*.test.ts'",
+        "test-all": "./scripts/test-all.sh",
         "compile": "hardhat compile",
-        "test-live-txs": "npm run test-live-txs --workspaces",
-        "redeploy": "hardhat compile && ./deploy-contracts.sh --reset",
+        "test-live-txs": "./scripts/test-live-txs.sh",
+        "deploy": "hardhat compile && ./scripts/deploy-contracts.sh",
+        "redeploy": "hardhat compile && ./scripts/deploy-contracts.sh --reset",
         "build": "tsc",
         "watch": "tsc -w",
         "prepublishOnly": "npm run build",
@@ -50,8 +51,7 @@
         "@eslint/js": "^9.9.0",
         "@nomicfoundation/hardhat-ethers": "^3.0.6",
         "@nomicfoundation/hardhat-ignition-ethers": "^0.15.5",
-        "@typechain/ethers-v6": "^0.5.1",
-        "@typechain/hardhat": "^9.1.0",
+        "@nomicfoundation/hardhat-web3-v4": "^1.0.0",
         "@types/chai": "^4.1.7",
         "@types/eslint__js": "^8.42.3",
         "@types/fs-extra": "^11.0.4",
@@ -59,16 +59,16 @@
         "@types/node": "^18.0.0",
         "chai": "^4.3.0",
         "eslint": "^8.57.0",
-        "ethers": "^6.13.2",
+        "ethers": "^6",
         "globals": "^15.9.0",
         "hardhat": "^2.22.0",
         "mocha": "^10.7.2",
         "prettier": "3.3.0",
         "prettier-eslint-cli": "^8.0.0",
         "ts-node": "^8.1.0",
-        "typechain": "^8.3.2",
         "typescript": "^5.0.0",
-        "typescript-eslint": "^8.2.0"
+        "typescript-eslint": "^8.2.0",
+        "web3": "^4"
     },
     "peerDependencies": {
         "hardhat": "^2.22.0"

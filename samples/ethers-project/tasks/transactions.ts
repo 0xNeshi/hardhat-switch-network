@@ -6,25 +6,29 @@ import polygonAmoyAddresses from "../../../ignition/deployments/chain-80002/depl
 const eth_sep_address = ethereumSepoliaAddresses["HHSN#HHSN"];
 const pol_amoy_address = polygonAmoyAddresses["HHSN#HHSN"];
 
-task("transactions", "Tests sending transactions to multiple chains", async (taskArgs, hre) => {
-    const randomNumber = Math.floor(Math.random() * 10000);
-    // test sending transactions
-    console.log("Updating message on Ethereum Sepolia...");
-    await hre.switchNetwork("sepolia");
-    const eth_sep_hhsn = await hre.ethers.getContractAt("HHSN", eth_sep_address);
-    await (await eth_sep_hhsn.update(`Sepolia: ${randomNumber}`)).wait();
+task(
+    "transactions",
+    "Tests sending transactions to multiple chains with ethers.js",
+    async (_, hre) => {
+        const randomNumber = Math.floor(Math.random() * 10000);
+        // test sending transactions
+        console.log("Updating message on Polygon Amoy...");
+        await hre.switchNetwork("polygonAmoy");
+        const pol_amoy_hhsn = await hre.ethers.getContractAt("HHSN", pol_amoy_address);
+        await (await pol_amoy_hhsn.update(`Polygon Amoy: ${randomNumber}`)).wait();
 
-    console.log("Updating message on Polygon Amoy...");
-    await hre.switchNetwork("polygonAmoy");
-    const pol_amoy_hhsn = await hre.ethers.getContractAt("HHSN", pol_amoy_address);
-    await (await pol_amoy_hhsn.update(`Polygon Amoy: ${randomNumber}`)).wait();
+        console.log("Updating message on Ethereum Sepolia...");
+        await hre.switchNetwork("sepolia");
+        const eth_sep_hhsn = await hre.ethers.getContractAt("HHSN", eth_sep_address);
+        await (await eth_sep_hhsn.update(`Sepolia: ${randomNumber}`)).wait();
 
-    // test getting data from the chain
-    console.log("Test message on Ethereum Sepolia...");
-    await hre.switchNetwork("sepolia");
-    assert(await eth_sep_hhsn.message(), `Sepolia: ${randomNumber}`);
+        // test getting data from the chain
+        console.log("Test message on Polygon Amoy...");
+        await hre.switchNetwork("polygonAmoy");
+        assert(await pol_amoy_hhsn.message(), `Polygon Amoy: ${randomNumber}`);
 
-    console.log("Test message on Polygon Amoy...");
-    await hre.switchNetwork("polygonAmoy");
-    assert(await pol_amoy_hhsn.message(), `Polygon Amoy: ${randomNumber}`);
-});
+        console.log("Test message on Ethereum Sepolia...");
+        await hre.switchNetwork("sepolia");
+        assert(await eth_sep_hhsn.message(), `Sepolia: ${randomNumber}`);
+    },
+);
