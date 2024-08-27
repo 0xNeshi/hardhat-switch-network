@@ -10,7 +10,7 @@ If you find a bug or want to propose a new feature, please [open an issue](https
 
 This repository is handled with [npm](https://www.npmjs.com/).
 
-There's a folder called `samples/` that contains the same example project implemented with all the supported libraries for interacting with the Ethereum blockchain.
+There's a folder called `examples/` that contains the same example project implemented with all the supported libraries for interacting with the Ethereum blockchain.
 
 ## Installing
 
