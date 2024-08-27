@@ -5,7 +5,7 @@ import type { EthereumProvider } from "hardhat/types/provider";
 import "./type-extensions";
 
 extendEnvironment((hre) => {
-    // We add a field to the Hardhat Runtime Environment here.
+    // We store providers for faster future lookups
     const providers: { [name: string]: EthereumProvider } = {
         [hre.network.name]: hre.network.provider,
     };
