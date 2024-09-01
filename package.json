@@ -58,7 +58,7 @@
         "@types/mocha": "^10.0.0",
         "@types/node": "^18.0.0",
         "chai": "^4.3.0",
-        "eslint": "^8.57.0",
+        "eslint": "^9.9.1",
         "ethers": "^6",
         "globals": "^15.9.0",
         "hardhat": "^2.22.0",
