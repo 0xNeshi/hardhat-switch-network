@@ -49,7 +49,8 @@ import "hardhat-switch-network";
 -   if you're using TypeScript, open your _hardhat.config.ts_ and copy/paste the code from [./src/index.ts](./src/index.ts) and [./src/type-extensions.ts](./src/type-extensions.ts)
 -   if you're using JavaScript, open your _hardhat.config.js_ file, copy/paste the code from [./src/index.ts](./src/index.ts), turn `imports` into `requires` and strip it of types. Voila!
 
-> Tip: remove all the code related to providers you do not use on your project, e.g. if you're using `ethers.js`, remove `web3` provider update.
+> Tip 1: remove all the code related to providers you do not use on your project, e.g. if you're using `ethers`, remove `web3` provider update.
+> Tip 2: if you're using `hardhat-viem`, you can completely remove code that updates providers for `ethers` and `web3`
 
 ### Required plugins
 
