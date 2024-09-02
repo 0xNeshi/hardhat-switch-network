@@ -13,6 +13,13 @@ This plugin allows you to switch between networks dynamically during the executi
 
 ## Installation
 
+There are two ways to include this code into your project:
+
+1. [Install the npm package](#1-the-npm-package-method)
+2. [Just copy/paste it](#2-the-copypaste-method)
+
+### 1. The npm Package Method
+
 To install the plugin, use the following command:
 
 ```bash
@@ -37,7 +44,14 @@ Or if you are using TypeScript, in your `hardhat.config.ts`:
 import "hardhat-switch-network";
 ```
 
-## Required plugins
+### 2. The Copy/Paste Method
+
+-   if you're using TypeScript, open your _hardhat.config.ts_ and copy/paste the code from [./src/index.ts](./src/index.ts) and [./src/type-extensions.ts](./src/type-extensions.ts)
+-   if you're using JavaScript, open your _hardhat.config.js_ file, copy/paste the code from [./src/index.ts](./src/index.ts), turn `imports` into `requires` and strip it of types. Voila!
+
+> Tip: remove all the code related to providers you do not use on your project, e.g. if you're using `ethers.js`, remove `web3` provider update.
+
+### Required plugins
 
 There are no required plugins. This plugin automatically detects which underlying Hardhat plugin for interacting with the Ethereum blockchain is being used and hooks into it. You just install this plugin and use it!
 
