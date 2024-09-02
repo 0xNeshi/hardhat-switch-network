@@ -44,5 +44,6 @@ extendEnvironment((hre) => {
         if ("web3" in hre) {
             hre.web3 = new (await import("web3")).Web3(toProvider);
         }
+        // for viem there's no need to update anything, it uses the updated hre object to determine the target network
     });
 });
