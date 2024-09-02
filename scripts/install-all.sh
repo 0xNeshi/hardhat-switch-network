@@ -24,7 +24,7 @@ done
 
 eval "$command"
 
-for proj in ./samples/*; do
+for proj in ./examples/*; do
     cd "$proj"
     eval "$command"
     cd ../..

@@ -38,7 +38,7 @@ echo "Moving compilation artifacts into projects..."
 
 dir_array=("./artifacts" "./cache")
 
-for proj in ./samples/*; do
+for proj in ./examples/*; do
     for dir in "${dir_array[@]}"; do
         cp -r "$dir" "$proj"
     done
