@@ -58,6 +58,7 @@ There are no required plugins. This plugin automatically detects which underlyin
 Currently supported Hardhat plugins for interacting with the Ethereum blockchain:
 
 -   [@nomicfoundation/hardhat-ethers](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-ethers)
+-   [@nomicfoundation/hardhat-viem](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-viem)
 -   [@nomicfoundation/hardhat-web3-v4](https://github.com/NomicFoundation/hardhat/tree/main/packages/hardhat-web3-v4)
 
 ## Tasks
