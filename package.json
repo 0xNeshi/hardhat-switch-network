@@ -61,7 +61,7 @@
         "chai": "^5.1.2",
         "eslint": "^9.11.1",
         "ethers": "^6",
-        "globals": "^15.9.0",
+        "globals": "^15.11.0",
         "hardhat": "^2.22.12",
         "mocha": "^10.8.2",
         "prettier": "3.3.3",
