@@ -63,7 +63,7 @@
         "ethers": "^6",
         "globals": "^15.12.0",
         "hardhat": "^2.22.12",
-        "mocha": "^10.8.2",
+        "mocha": "^11.0.1",
         "prettier": "3.4.1",
         "prettier-eslint-cli": "^8.0.0",
         "ts-node": "^10.9.2",
