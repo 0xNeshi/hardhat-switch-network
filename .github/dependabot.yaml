@@ -5,9 +5,11 @@ updates:
       directory: "/" # Location of package manifests
       schedule:
           interval: "monthly"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-minor"]
+      ignore:
+        - dependency-name: "*"
+          update-types:
+              - "sem-ver:patch"
+              - "sem-ver:minor"
       open-pull-requests-limit: 50
       versioning-strategy: increase
     # Keep dependencies for GitHub Actions up-to-date
