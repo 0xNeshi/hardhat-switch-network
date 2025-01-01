@@ -57,7 +57,7 @@
         "@types/eslint__js": "^8.42.3",
         "@types/fs-extra": "^11.0.4",
         "@types/mocha": "^10.0.10",
-        "@types/node": "^22.10.1",
+        "@types/node": "^22.10.3",
         "chai": "^5.1.2",
         "eslint": "^9.16.0",
         "ethers": "^6",
