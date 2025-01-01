@@ -10,6 +10,7 @@ updates:
           update-types:
               - "sem-ver:patch"
               - "sem-ver:minor"
+        - dependency-name: "hardhat"
       open-pull-requests-limit: 50
       versioning-strategy: increase
     # Keep dependencies for GitHub Actions up-to-date
