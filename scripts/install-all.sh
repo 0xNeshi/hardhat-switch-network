@@ -6,13 +6,13 @@ root_dir=$(pwd)
 
 echo "Root: $root_dir"
 
-command="npm install"
+command="npm ci"
+export HARDHAT_IGNITION_CONFIRM_RESET=false
 
 while [[ "$#" -gt 0 ]]; do
     case $1 in
-    --clean)
-        command="npm ci"
-        export HARDHAT_IGNITION_CONFIRM_RESET=false
+    --latest)
+        command="rm -f package-lock.json && npm install"
         ;;
     *)
         echo "Unknown option: $1"
