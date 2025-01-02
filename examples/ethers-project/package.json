@@ -15,7 +15,7 @@
         "chai": ">=4.3.0",
         "eslint": ">=8.5.0",
         "ethers": ">=6.13.2",
-        "hardhat": "^2.22.0",
+        "hardhat": "^2.0.0",
         "hardhat-switch-network": "file:../../dist",
         "mocha": ">=10.7.2",
         "prettier": "3.3.0",
