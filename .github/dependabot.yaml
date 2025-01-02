@@ -1,19 +1,5 @@
 version: 2
 updates:
-    # Enable version updates for plugin itself
-    - package-ecosystem: "npm"
-      directory: "/" # Location of package manifests
-      schedule:
-          interval: "monthly"
-      ignore:
-        - dependency-name: "*"
-          update-types:
-              - "sem-ver:patch"
-              - "sem-ver:minor"
-        - dependency-name: "hardhat"
-      open-pull-requests-limit: 50
-      versioning-strategy: increase
-    # Keep dependencies for GitHub Actions up-to-date
     - package-ecosystem: "github-actions"
       directory: "/"
       schedule:
