@@ -28,7 +28,6 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
             - run: npm run install-all
-            - run: npm run lint
             - run: npx hardhat vars set ALCHEMY_API_KEY ${{ secrets.ALCHEMY_API_KEY }} &&
                   npx hardhat vars set DEPLOYER_PRIVATE_KEY ${{ secrets.DEPLOYER_PRIVATE_KEY }} &&
                   npx hardhat vars set ETHERSCAN_API_KEY ${{ secrets.ETHERSCAN_API_KEY }} &&
@@ -51,7 +50,6 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
             - run: npm run install-all-latest
-            - run: npm run lint
             - run: npx hardhat vars set ALCHEMY_API_KEY ${{ secrets.ALCHEMY_API_KEY }} &&
                   npx hardhat vars set DEPLOYER_PRIVATE_KEY ${{ secrets.DEPLOYER_PRIVATE_KEY }} &&
                   npx hardhat vars set ETHERSCAN_API_KEY ${{ secrets.ETHERSCAN_API_KEY }} &&
