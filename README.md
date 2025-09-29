@@ -11,6 +11,10 @@
 
 This plugin allows you to switch between networks dynamically during the execution of Hardhat tasks or scripts. This is particularly useful when you need to interact with different Ethereum networks without restarting your Hardhat node or re-running your scripts.
 
+## Note
+
+**This project is no longer maintained, but I will still review contributors' PRs. This plugin works with Hardhat 2, and _might_ work with Hardhat 3. If you find out it doesn't actually work with Hardhat 3, feel free to open a PR fix, and I will review it, merge it and publish a new package version.**
+
 ## Installation
 
 There are two ways to include this code into your project:
