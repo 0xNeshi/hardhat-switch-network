@@ -29,11 +29,6 @@ done
 
 set +e
 
-for chain_path in ./ignition/deployments/*; do
-    chain=$(basename "$chain_path")
-    npx hardhat ignition verify "$chain" --include-unrelated-contracts
-done
-
 echo "Moving compilation artifacts into projects..."
 
 dir_array=("./artifacts" "./cache")
