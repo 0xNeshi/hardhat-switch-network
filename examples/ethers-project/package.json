@@ -7,7 +7,7 @@
     },
     "devDependencies": {
         "@nomicfoundation/hardhat-chai-matchers": ">=2.0.7",
-        "@nomicfoundation/hardhat-ethers": ">=3.0.6",
+        "@nomicfoundation/hardhat-ethers": "^3.0.6",
         "@types/chai": ">=4.1.7",
         "@types/fs-extra": ">=11.0.4",
         "@types/mocha": ">=10.0.0",
