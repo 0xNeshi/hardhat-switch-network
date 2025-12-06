@@ -52,6 +52,7 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
             - run: npm run install-all-latest
+            - run: npm run build --if-present
             - run: npm run set-hardhat-vars
               env:
                 ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
