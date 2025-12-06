@@ -39,7 +39,7 @@ jobs:
             - run: npm run test-all
 
     test-latest:
-        if: github.event_name == 'schedule'
+        # if: github.event_name == 'schedule'
         runs-on: ubuntu-latest
         strategy:
             matrix:
