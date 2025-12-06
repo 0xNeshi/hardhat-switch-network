@@ -11,8 +11,6 @@ const deployerPrivateKey = vars.get(
     "DEPLOYER_PRIVATE_KEY",
     "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
 );
-const etherscanApiKey = vars.get("ETHERSCAN_API_KEY");
-const polygoncanApiKey = vars.get("POLYGONSCAN_API_KEY");
 
 const config: HardhatUserConfig = {
     solidity: "0.8.19",
@@ -26,22 +24,6 @@ const config: HardhatUserConfig = {
             url: `https://polygon-amoy.g.alchemy.com/v2/${providerApiKey}`,
             accounts: [deployerPrivateKey],
         },
-    },
-    etherscan: {
-        apiKey: {
-            sepolia: etherscanApiKey,
-            polygonAmoy: polygoncanApiKey,
-        },
-        customChains: [
-            {
-                network: "polygonAmoy",
-                chainId: 80002,
-                urls: {
-                    apiURL: "https://api-amoy.polygonscan.com/api",
-                    browserURL: "https://amoy.polygonscan.com/",
-                },
-            },
-        ],
     },
 };
 

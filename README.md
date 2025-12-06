@@ -13,7 +13,7 @@ This plugin allows you to switch between networks dynamically during the executi
 
 ## Note
 
-**This project is no longer maintained, but I will still review contributors' PRs. This plugin works with Hardhat 2, and _might_ work with Hardhat 3. If you find out it doesn't actually work with Hardhat 3, feel free to open a PR fix, and I will review it, merge it and publish a new package version.**
+**This project is no longer maintained, but I will still review contributors' PRs. This plugin works with Hardhat v2, and was not built to work with Hardhat v3. Feel free to create a PR adding Hardhat v3 support.**
 
 ## Installation
 
