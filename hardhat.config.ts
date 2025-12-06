@@ -1,4 +1,5 @@
 import "@nomicfoundation/hardhat-ethers";
+import "@nomicfoundation/hardhat-ignition-ethers";
 import "@nomicfoundation/hardhat-web3-v4";
 import { vars } from "hardhat/config";
 import { HardhatUserConfig } from "hardhat/types";
