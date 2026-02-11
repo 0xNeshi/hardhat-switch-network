@@ -18,7 +18,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [22, 24]
+                node-version: [16, 18, 20, 22, 24]
             fail-fast: false
 
         steps:
@@ -27,9 +27,9 @@ jobs:
               uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
-                #   cache: "npm"
+                  cache: "npm"
             - run: |
-                npm run install-all-latest
+                npm run install-all
                 echo "Exit code: $?"
         
             - name: Verify hardhat is installed
@@ -62,7 +62,16 @@ jobs:
               uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: npm run install-all-latest
+            - run: |
+                npm run install-all-latest
+                echo "Exit code: $?"
+        
+            - name: Verify hardhat is installed
+              run: |
+                which npx
+                npx hardhat --version || echo "Hardhat not found!"
+                ls -la node_modules/.bin/ | grep hardhat || echo "No hardhat binary!"
+            
             - run: npm run set-hardhat-vars
               env:
                 ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
