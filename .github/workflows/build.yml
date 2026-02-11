@@ -28,7 +28,16 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
-            - run: npm run install-all
+            - run: |
+                npm run install-all
+                echo "Exit code: $?"
+        
+            - name: Verify hardhat is installed
+              run: |
+                which npx
+                npx hardhat --version || echo "Hardhat not found!"
+                ls -la node_modules/.bin/ | grep hardhat || echo "No hardhat binary!"
+            
             - run: npm run set-hardhat-vars
               env:
                 ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
@@ -53,7 +62,16 @@ jobs:
               uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: npm run install-all-latest
+            - run: |
+                npm run install-all-latest
+                echo "Exit code: $?"
+        
+            - name: Verify hardhat is installed
+              run: |
+                which npx
+                npx hardhat --version || echo "Hardhat not found!"
+                ls -la node_modules/.bin/ | grep hardhat || echo "No hardhat binary!"
+            
             - run: npm run set-hardhat-vars
               env:
                 ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
