@@ -23,7 +23,7 @@
         "change-network"
     ],
     "scripts": {
-        "set-hardhat-vars": "npx hardhat vars set ALCHEMY_API_KEY $ALCHEMY_API_KEY && npx hardhat vars set DEPLOYER_PRIVATE_KEY $DEPLOYER_PRIVATE_KEY && npx hardhat vars set ETHERSCAN_API_KEY $ETHERSCAN_API_KEY && npx hardhat vars set POLYGONSCAN_API_KEY $POLYGONSCAN_API_KEY",
+        "set-hardhat-vars": "hardhat vars set ALCHEMY_API_KEY $ALCHEMY_API_KEY && hardhat vars set DEPLOYER_PRIVATE_KEY $DEPLOYER_PRIVATE_KEY && hardhat vars set ETHERSCAN_API_KEY $ETHERSCAN_API_KEY && hardhat vars set POLYGONSCAN_API_KEY $POLYGONSCAN_API_KEY",
         "install-all-latest": "./scripts/install-all.sh --latest",
         "install-all": "./scripts/install-all.sh",
         "test": "mocha --exit --recursive 'test/**/*.test.ts'",
