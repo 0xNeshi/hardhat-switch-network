@@ -15,7 +15,7 @@ export HARDHAT_IGNITION_CONFIRM_RESET=false
 while [[ "$#" -gt 0 ]]; do
     case $1 in
     --latest)
-        command="rm -f package-lock.json && npm install"
+        command="rm -f package-lock.json && npm install --legacy-peer-deps"
         ;;
     *)
         echo "Unknown option: $1"
