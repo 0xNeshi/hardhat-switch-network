@@ -25,7 +25,10 @@ done
 eval "$command"
 
 for proj in ./examples/*; do
-    cd "$proj"
-    eval "$command"
-    cd ../..
+    if [ -d "$proj" ]; then
+        echo "Installing in $proj..."
+        cd "$proj" || exit 1
+        eval "$command" || exit 1
+        cd "$root_dir" || exit 1
+    fi
 done
