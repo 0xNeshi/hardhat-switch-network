@@ -34,9 +34,8 @@ jobs:
         
             - name: Verify hardhat is installed
               run: |
-                which npx
-                npx hardhat --version || echo "Hardhat not found!"
-                ls -la node_modules/.bin/ | grep hardhat || echo "No hardhat binary!"
+                npx hardhat --version
+                ls -la node_modules/.bin/ | grep hardhat
             
             - run: npm run set-hardhat-vars
               env:
