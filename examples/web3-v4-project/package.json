@@ -20,7 +20,7 @@
         "prettier": "3.3.0",
         "prettier-eslint-cli": ">=7.0.0",
         "ts-node": ">=8.1.0",
-        "typescript": ">=5.0.0",
+        "typescript": ">=5.0.0 <7",
         "web3": ">=4.12.1"
     }
 }
