@@ -35,6 +35,12 @@ You will also need to fund your deployer account with some Sepolia ETH and Polyg
 -   Sepolia ETH: https://www.alchemy.com/faucets/ethereum-sepolia
 -   Amoy MATIC: https://www.alchemy.com/faucets/polygon-amoy
 
+## Dependency version constraints
+
+`typescript` is capped at `<7` in the root `package.json` and in every project under `examples/`. TypeScript 7 dropped the compiler APIs that [ts-node](https://github.com/TypeStrong/ts-node) needs, and Hardhat v2 uses ts-node to load `hardhat.config.ts`, so with TypeScript 7 installed every `hardhat` invocation dies with `TypeError: Cannot read properties of undefined (reading 'fileExists')`. See the [README](README.md#typescript-7-is-not-supported) for details.
+
+Please keep the cap when bumping dependencies. It matters most for the scheduled `test-latest` CI job, which deletes the lockfiles and runs `npm install` (see `scripts/install-all.sh --latest`), so every open-ended range floats to the newest published version. Lifting the cap requires dropping ts-node, which in practice means Hardhat v3 support.
+
 ## Building the projects
 
 Sample projects require the plugin to be built. Our recommendation is to run `npm run watch` from the root folder. This will keep everything compiled, and you can always test the most recent changes to the plugin.

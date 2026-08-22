@@ -15,6 +15,23 @@ This plugin allows you to switch between networks dynamically during the executi
 
 **This project is no longer maintained, but I will still review contributors' PRs. This plugin works with Hardhat v2, and was not built to work with Hardhat v3. Feel free to create a PR adding Hardhat v3 support.**
 
+### TypeScript 7 is not supported
+
+Hardhat v2 loads `hardhat.config.ts` through [ts-node](https://github.com/TypeStrong/ts-node), and ts-node uses compiler APIs (such as `ts.sys`) that TypeScript 7 no longer exposes. With TypeScript 7 installed, every Hardhat v2 command fails before your config is even read:
+
+```
+TypeError: Cannot read properties of undefined (reading 'fileExists')
+    at readConfig (node_modules/ts-node/src/configuration.ts:161:25)
+```
+
+This affects any Hardhat v2 project, with or without this plugin, so keep TypeScript below 7 in TypeScript projects:
+
+```json
+"typescript": ">=5.7.2 <7"
+```
+
+There is nothing this plugin can do about it: the fix lives in Hardhat v3, which ships its own TypeScript loader instead of ts-node, and this plugin does not target Hardhat v3.
+
 ## Installation
 
 There are two ways to include this code into your project:
